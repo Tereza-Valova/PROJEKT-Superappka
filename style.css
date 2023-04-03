@@ -1,6 +1,13 @@
 /* pouzivame intuitivnejsi box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+	box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
+}
 
 /*
  BARVY
@@ -24,10 +31,213 @@ body {
 }
 
 .obal {
-	max-width: 960px; /* obsah stránky je omezený do pruhu širokého max. 960px */
-	margin: 0 auto; /* pruh je na stránce vycentrovaný */
+	max-width: 960px;
+	/* obsah stránky je omezený do pruhu širokého max. 960px */
+	margin: 0 auto;
+	/* pruh je na stránce vycentrovaný */
 	background: white;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+
+.obal {
+	padding-top: 5px;
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	gap: 20px;
+}
+
+.logo {
+	flex: 100%;
+	text-align: center;
+	font-weight: 700;
+}
+
+.menu .nav {
+
+	padding: 20px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.menu li a {
+	flex: calc(100% / 3);
+	text-decoration: none;
+}
+
+.menu .nav:hover {
+	background-color: #48418e;
+	color: white;
+}
+
+.menu .nav:hover>a {
+	color: white;
+}
+
+.hero {
+	background: url(images/pozadi.jpg);
+	min-height: 400px;
+	padding: 5px 30px 0px 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.hero h1 {
+	color: white;
+	font-size: 52px;
+	font-weight: 400;
+
+
+}
+
+.hero p {
+	color: white;
+	font-size: 32px;
+	font-weight: 300;
+}
+
+.telefon {
+	display: none;
+}
+
+.tlacitka {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+
+.tlacitko {
+	text-decoration: none;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: 1px solid white;
+	box-shadow: 1px 5px 7px -7px rgba(37, 19, 61, 1);
+}
+
+.tlacitko:hover {
+	background-color: #48418e;
+}
+
+
+
+.sloupce {
+	padding: 40px 80px;
+}
+
+
+.popisek h2 {
+	color: #48418e;
+}
+
+.sloupce img {
+	inline-size: 80px;
+	flex: 10%;
+}
+
+.popisek {
+	flex: 90%;
+}
+
+.sloupec {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+.footer {
+	background-color: #48418e;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+@media screen and (min-width:900px) {
+
+	.menu {
+		flex-wrap: nowrap;
+		justify-content: left;
+	}
+
+	.logo {
+		flex: none;
+		padding: 15px 30px;
+
+	}
+
+	.menu .nav {
+		padding: 15px;
+	}
+
+	.hero {
+
+		min-height: 450px;
+		text-align: left;
+		padding: 5px 30px 0px 30px;
+		position: relative;
+	}
+
+	.hero h1 {
+		font-size: 90px;
+		margin-top: 30px;
+	}
+
+	.hero p {
+		font-size: 36px;
+		margin-bottom: 30px;
+		margin-top: -30px;
+
+	}
+
+	.tlacitka {
+		justify-content: left;
+		padding-bottom: 60px;
+	}
+
+	.tlacitko {
+		font-size: 20px;
+	}
+
+	.telefon {
+		display: block;
+		position: absolute;
+
+		right: 0%;
+		bottom: 0%;
+	}
+
+	.sloupce {
+		display: flex;
+		gap: 30px;
+	}
+
+	.sloupec {
+		display: block;
+		text-align: center;
+
+
+	}
+
+	.popisek h2 {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+
+
+
+
+
+
+
+}
